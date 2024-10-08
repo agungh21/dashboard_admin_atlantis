@@ -13,9 +13,8 @@ class Response
             'icon'        => 'flaticon-alarm-1',
             'code'        => 500,
             'title'       => 'Terjadi Kesalahan',
-            'message'    => "{$e->getFile()} : {$e->getLine()} {$e->getMessage()}",
-            'trace'        => $e->getTraceAsString()
-        ], 500);
+            'message'    => "{$e->getFile()} : {$e->getLine()} {$e->getMessage()}"
+        ]);
     }
 
 

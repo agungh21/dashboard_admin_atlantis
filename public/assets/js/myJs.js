@@ -348,7 +348,7 @@ const ajaxErrorHandling = (error, $form = null) => {
 
 	message = message == "" ? 'XHR Invalid' : message;
 
-	warningNotification('Peringatan', message);
+	notify('Gagal', message, 'danger', 'fa-solid fa-triangle-exclamation');
 }
 
 const confirmation = (message, yesAction = null, cancelAction = null) => {

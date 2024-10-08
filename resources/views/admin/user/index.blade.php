@@ -32,104 +32,126 @@
 </div>
 
 <div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="modalCreateTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+				<h5 class="modal-title" id="modalCreateLongTitle">Tambah</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
             <form id="formCreate">
-			<div class="modal-body">
+			    <div class="modal-body">
                     <?php
                         $wajibIsi = '<span class="text-danger">*</span>';
                     ?>
-                    <div class="form-group">
-                        <label for="name" class="form-label">Nama {!! $wajibIsi !!}</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Contoh: Jhon">
-                        <span class="invalid-feedback"></span>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nama {!! $wajibIsi !!}</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Contoh: Jhon">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email {!! $wajibIsi !!}</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Contoh: Jhon@gmail.com">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username {!! $wajibIsi !!}</label>
+                                <input type="text" class="form-control" name="username" id="username" placeholder="Contoh: jhon">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password {!! $wajibIsi !!}</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password_confirmation" class="form-label">Confirm Password {!! $wajibIsi !!}</label>
+                                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Masukkan Confirm Password">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="role" class="form-label">Role {!! $wajibIsi !!}</label>
+                                <select class="form-control" name="role" aria-label="" style="width: 100%;">
+                                    <option selected disabled>Pilih Role</option>
+                                    <option value="admin">Admin</option>
+                                  </select>
+                                <span class="invalid-feedback"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email {!! $wajibIsi !!}</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Contoh: Jhon@gmail.com">
-                        <span class="invalid-feedback"></span>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
-                    <div class="form-group">
-                        <label for="password" class="form-label">Password {!! $wajibIsi !!}</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password">
-                        <span class="invalid-feedback"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="password_confirmation" class="form-label">Confirm Password {!! $wajibIsi !!}</label>
-                        <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Masukkan Confirm Password">
-                        <span class="invalid-feedback"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="role" class="form-label">Role {!! $wajibIsi !!}</label>
-                        <select class="form-control" name="role" aria-label="">
-                            <option selected disabled>Pilih Role</option>
-                            <option value="admin">Admin</option>
-                          </select>
-                        <span class="invalid-feedback"></span>
-                    </div>
-            </div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				<button type="submit" class="btn btn-primary">Simpan</button>
-			</div>
+                </div>
             </form>
 		</div>
 	</div>
 </div>
 
 <div class="modal fade" id="modalUpdate" tabindex="-1" role="dialog" aria-labelledby="modalUpdateTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+				<h5 class="modal-title" id="modalUpdateLongTitle">Update</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
             <form id="formUpdate">
-			<div class="modal-body">
+			    <div class="modal-body">
                     <?php
                         $wajibIsi = '<span class="text-danger">*</span>';
                     ?>
-                    <div class="form-group">
-                        <label for="name" class="form-label">Nama {!! $wajibIsi !!}</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Contoh: Jhon">
-                        <span class="invalid-feedback"></span>
+                     <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nama {!! $wajibIsi !!}</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Contoh: Jhon">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email {!! $wajibIsi !!}</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Contoh: Jhon@gmail.com">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username {!! $wajibIsi !!}</label>
+                                <input type="text" class="form-control" name="username" id="username" placeholder="Contoh: jhon">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password (diisi jika ingin mengganti)</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password_confirmation" class="form-label">Confirm Password (diisi jika ingin mengganti)</label>
+                                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Masukkan Confirm Password">
+                                <span class="invalid-feedback"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="role" class="form-label">Role {!! $wajibIsi !!}</label>
+                                <select class="form-control" name="role" aria-label="" style="width: 100%;">
+                                    <option selected disabled>Pilih Role</option>
+                                    <option value="admin">Admin</option>
+                                  </select>
+                                <span class="invalid-feedback"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email {!! $wajibIsi !!}</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Contoh: Jhon@gmail.com">
-                        <span class="invalid-feedback"></span>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="update" class="btn btn-primary">Update</button>
                     </div>
-                    <div class="form-group">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password">
-                        <span class="invalid-feedback"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="password_confirmation" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Masukkan Confirm Password">
-                        <span class="invalid-feedback"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="role" class="form-label">Role {!! $wajibIsi !!}</label>
-                        <select class="form-control" name="role" aria-label="">
-                            <option selected disabled>Pilih Role</option>
-                            <option value="admin">Admin</option>
-                          </select>
-                        <span class="invalid-feedback"></span>
-                    </div>
-            </div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				<button type="update" class="btn btn-primary">Update</button>
-			</div>
+                </div>
             </form>
 		</div>
 	</div>
@@ -231,7 +253,7 @@
                                             reloadDT();
                                         })
                                         .fail(error => {
-                                            notify(title, message, type, icon);
+                                            ajaxErrorHandling(error);
                                         })
                             })
                         })
@@ -255,8 +277,8 @@
                                     clearInvalid();
                                     $modalUpdate.modal('show')
                                     $formUpdate.attr('action', editHref)
-                                    $formUpdate.find(`[name="name"]`).val(user
-                                        .name);
+                                    $formUpdate.find(`[name="name"]`).val(user.name);
+                                    $formUpdate.find(`[name="username"]`).val(user.username);
                                     $formUpdate.find(`[name="email"]`).val(user.email);
                                     $formUpdate.find(`[name="role"]`).val(user.role);
 
@@ -269,7 +291,7 @@
                                     );
                                 })
                                 .fail(error => {
-                                    notify(title, message, type, icon);
+                                    ajaxErrorHandling(error, $modalUpdate);
                                 })
                             })
                     })
@@ -313,7 +335,7 @@
                             }
                         }).fail(error => {
                             $submit.ladda('stop');
-                            notify(title, message, type, icon);
+                            ajaxErrorHandling(error, $modal);
                         })
                     })
                 }

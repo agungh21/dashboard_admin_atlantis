@@ -9,12 +9,15 @@ class Validations
         $request->validate(
             [
                 'name' => 'required',
+                'username' => 'required|unique:users',
                 'email' => 'required|email|unique:users',
                 'password' => 'required|confirmed',
                 'role' => 'required',
             ],
             [
                 'name.required' => 'Nama tidak boleh kosong',
+                'username.required' => 'Username tidak boleh kosong',
+                'username.unique' => 'Username Sudah Digunakan',
                 'email.required' => 'Email tidak boleh kosong',
                 'email.unique' => 'Email Sudah Digunakan',
                 'email.email' => 'Email Tidak Valid',
@@ -30,12 +33,15 @@ class Validations
         $request->validate(
             [
                 'name' => 'required',
+                'username' => 'required|unique:users,username,' . $userId,
                 'email' => 'required|email|unique:users,email,' . $userId,
                 'password' => 'nullable|confirmed',
                 'role' => 'required',
             ],
             [
                 'name.required' => 'Nama tidak boleh kosong',
+                'username.required' => 'Username tidak boleh kosong',
+                'username.unique' => 'Username Sudah Digunakan',
                 'email.required' => 'Email tidak boleh kosong',
                 'email.unique' => 'Email sudah digunakan',
                 'email.email' => 'Email Tidak Valid',
